@@ -2,71 +2,48 @@
 <html lang="id">
 
 <head>
-    <!-- ============================================================================
-       DelapanBit.my.id - Landing Page
-       
-       PANDUAN CUSTOMIZATION:
-       ----------------------
-       1. Ubah teks di dalam tag HTML untuk mengubah konten
-       2. Tambah/hapus section dengan copy-paste struktur yang ada
-       3. Ubah emoji/icon sesuai kebutuhan
-       4. Semua class sudah terdokumentasi di style.css
-       ============================================================================ -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags - Ubah sesuai kebutuhan -->
-    <title>DelapanBit - Digital Playground 🌿</title>
+    <title>Davyran - Developer Portfolio</title>
     <meta name="description"
-        content="DelapanBit adalah playground digital untuk eksplorasi teknologi, tools, dan kreativitas. Dibuat dengan cinta dan AI.">
-    <meta name="keywords" content="delapanbit, tools, converter, digital, teknologi">
-    <meta name="author" content="DelapanBit">
+        content="Portfolio Davyran — Fullstack Developer. TypeScript, Python, C, Lua. Discord bots, game mods, web apps.">
+    <meta name="keywords" content="davyran, portfolio, developer, typescript, python, discord bot, game development">
+    <meta name="author" content="Davyran">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="DelapanBit - Digital Playground">
-    <meta property="og:description" content="Playground digital untuk eksplorasi teknologi dan kreativitas">
+    <meta property="og:title" content="Davyran - Developer Portfolio">
+    <meta property="og:description" content="Fullstack Developer portfolio — TypeScript, Python, C, Lua">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://delapanbit.my.id">
+    <meta property="og:url" content="https://davyran.github.io">
 
-    <!-- Favicon - Ganti dengan favicon sendiri -->
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ============================================================================
-       NAVIGATION BAR
-       Ubah link navigasi sesuai section yang ada
-       ============================================================================ -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <!-- Logo - Ubah nama dan icon di sini -->
             <a href="#" class="nav-logo">
-                <span class="logo-icon">🌿</span>
-                <span>DelapanBit</span>
+                <span class="logo-icon">👨‍💻</span>
+                <span>Davyran</span>
             </a>
 
-            <!-- Navigation Links -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Beranda</a></li>
-                <li><a href="#services">Layanan</a></li>
                 <li><a href="#about">Tentang</a></li>
-                <li><a href="#tools">Tools</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
             </ul>
 
-            <!-- Mobile Menu Toggle -->
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -75,133 +52,68 @@
         </div>
     </nav>
 
-    <!-- ============================================================================
-       HERO SECTION
-       Bagian utama yang pertama kali dilihat pengunjung
-       ============================================================================ -->
     <section class="hero section" id="home">
-        <!-- Background Effects -->
         <div class="particles" id="particles"></div>
         <div class="hero-glow"></div>
         <div class="hero-glow"></div>
 
-        <!-- Hero Content -->
         <div class="hero-content">
-            <!-- Badge kecil di atas judul -->
-            <span class="hero-badge">✨ Welcome to the Forest</span>
+            <span class="hero-badge">👋 Halo, saya Davyran</span>
 
-            <!-- Judul Utama - Ubah teks sesuai kebutuhan -->
             <h1 class="hero-title">
-                Selamat Datang di<br>
-                <span class="highlight">DelapanBit</span>
+                Bangun Bot,<br>
+                <span class="highlight">Mod & Web</span>
             </h1>
 
-            <!-- Subtitle/Deskripsi singkat -->
             <p class="hero-subtitle">
-                Playground digital untuk eksplorasi teknologi, tools, dan kreativitas tanpa batas.
-                Tempat bermain sambil belajar hal-hal baru.
+                Fullstack Developer — TypeScript, Python, C, Lua.
+                Bikin Discord bot, game automation, dan web app.
             </p>
 
-            <!-- Tombol CTA -->
             <div class="hero-buttons">
-                <a href="#tools" class="btn btn-primary">
-                    🔧 Jelajahi Tools
+                <a href="#projects" class="btn btn-primary">
+                    🚀 Lihat Proyek
                 </a>
-                <a href="#about" class="btn btn-secondary">
-                    📖 Tentang Kami
+                <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-secondary">
+                    ⭐ GitHub Saya
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================================
-       SERVICES SECTION
-       Tampilkan layanan atau fitur utama
-       Tambah/kurangi kartu dengan copy-paste .service-card
-       ============================================================================ -->
-    <section class="services section" id="services">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="section-header animate-on-scroll">
-                <h2>Apa yang Kami Tawarkan</h2>
-                <p>Berbagai tools dan eksperimen digital yang bisa kamu gunakan secara gratis</p>
-            </div>
-
-            <!-- Services Grid -->
-            <div class="services-grid">
-
-                <!-- Service Card 1 -->
-                <div class="service-card animate-on-scroll delay-1">
-                    <div class="service-icon">🔄</div>
-                    <h3>Converter</h3>
-                    <p>Konversi berbagai format dan satuan dengan mudah. Unit, warna, basis angka, dan lainnya.</p>
-                </div>
-
-                <!-- Service Card 2 -->
-                <div class="service-card animate-on-scroll delay-2">
-                    <div class="service-icon">🎨</div>
-                    <h3>Eksperimen Web</h3>
-                    <p>Koleksi eksperimen interaktif dan visual yang menarik untuk dijelajahi.</p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card animate-on-scroll delay-3">
-                    <div class="service-icon">📚</div>
-                    <h3>Belajar Bersama</h3>
-                    <p>Resources dan tutorial sederhana untuk belajar teknologi web dan programming.</p>
-                </div>
-
-                <!-- Service Card 4 - Tambahkan atau hapus sesuai kebutuhan -->
-                <div class="service-card animate-on-scroll delay-4">
-                    <div class="service-icon">🌱</div>
-                    <h3>Open Source</h3>
-                    <p>Semua project dibuat dengan semangat berbagi dan bisa diakses siapa saja.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================================
-       ABOUT SECTION
-       Ceritakan tentang website/brand
-       ============================================================================ -->
     <section class="about section" id="about">
         <div class="container">
             <div class="about-container">
 
-                <!-- Visual/Image Side -->
                 <div class="about-visual animate-on-scroll">
                     <div class="about-image-placeholder">
-                        🌲
+                        🧑‍💻
                     </div>
                 </div>
 
-                <!-- Content Side -->
                 <div class="about-content animate-on-scroll delay-2">
-                    <h2>Tentang DelapanBit</h2>
+                    <h2>Tentang Saya</h2>
                     <p>
-                        DelapanBit adalah ruang digital personal untuk bereksperimen dengan teknologi web.
-                        Nama "DelapanBit" terinspirasi dari era 8-bit computing yang penuh nostalgia dan kreativitas.
+                        Saya Davyran, developer yang suka automation dan game scripting.
+                        Fokus di TypeScript dan Python — dari Discord bot sampai Minecraft automation.
                     </p>
                     <p>
-                        Di sini, kamu akan menemukan berbagai tools, eksperimen, dan project kecil yang dibuat
-                        untuk belajar sekaligus bersenang-senang. Semua dibuat dengan penuh cinta dan bantuan AI! 🤖
+                        Semua proyek saya open di GitHub. Senang eksperimen hal baru:
+                        bot, mod, web, dan tools kecil yang berguna.
                     </p>
 
-                    <!-- Stats - Ubah angka sesuai kebutuhan -->
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">∞</div>
-                            <div class="stat-label">Ide Baru</div>
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Repo Publik</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Selalu Online</div>
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Bahasa</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100%</div>
-                            <div class="stat-label">Gratis</div>
+                            <div class="stat-label">Open Source</div>
                         </div>
                     </div>
                 </div>
@@ -210,116 +122,183 @@
         </div>
     </section>
 
-    <!-- ============================================================================
-       TOOLS SECTION
-       Link ke berbagai tools/subdomain
-       Tambah tool baru dengan copy-paste .tool-card
-       ============================================================================ -->
-    <section class="tools section" id="tools">
+    <section class="services section" id="skills">
         <div class="container">
-            <!-- Section Header -->
             <div class="section-header animate-on-scroll">
-                <h2>Tools & Aplikasi</h2>
-                <p>Kumpulan tools yang siap membantu aktivitas digitalmu</p>
+                <h2>Keahlian</h2>
+                <p>Apa yang saya kerjakan sehari-hari</p>
             </div>
 
-            <!-- Tools Grid -->
-            <div class="tools-grid">
+            <div class="services-grid">
 
-                <!-- Tool Card 1 - Converter -->
-                <a href="https://converter.delapanbit.my.id" target="_blank" rel="noopener"
-                    class="tool-card animate-on-scroll delay-1">
-                    <div class="tool-icon">🔄</div>
-                    <h3>Universal Converter</h3>
-                    <p>Konversi unit, warna, basis angka, dan berbagai format lainnya dengan mudah</p>
-                    <span class="tool-link">
-                        Buka Converter →
-                    </span>
-                </a>
-
-                <!-- Tool Card 2 - Coming Soon (contoh untuk tool baru) -->
-                <div class="tool-card animate-on-scroll delay-2" style="opacity: 0.6; cursor: default;">
-                    <div class="tool-icon">🎲</div>
-                    <h3>Random Generator</h3>
-                    <p>Generate nama, warna, password, dan berbagai hal random lainnya</p>
-                    <span class="tool-link" style="color: var(--text-muted);">
-                        Segera Hadir
-                    </span>
+                <div class="service-card animate-on-scroll delay-1">
+                    <div class="service-icon">🤖</div>
+                    <h3>Bot Development</h3>
+                    <p>Discord & Telegram bot pakai TypeScript dan Python. JudgeBot, MinecraftBot, Selfbot.</p>
                 </div>
 
-                <!-- Tool Card 3 - Coming Soon -->
-                <div class="tool-card animate-on-scroll delay-3" style="opacity: 0.6; cursor: default;">
-                    <div class="tool-icon">📝</div>
-                    <h3>Text Tools</h3>
-                    <p>Berbagai tools untuk manipulasi teks: case converter, counter, encoder, dll</p>
-                    <span class="tool-link" style="color: var(--text-muted);">
-                        Segera Hadir
-                    </span>
+                <div class="service-card animate-on-scroll delay-2">
+                    <div class="service-icon">🎮</div>
+                    <h3>Game Scripting</h3>
+                    <p>Minecraft macro, Lua script, dan game mod. ES-ImGuiXPosed pakai C.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll delay-3">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Landing page, real estate web, sistem informasi alumni. HTML, CSS, Python.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll delay-4">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Automation & OOP</h3>
+                    <p>Python scripting, automation tools, dan praktik OOP bersih.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- ============================================================================
-       FOOTER
-       Bagian paling bawah website
-       ============================================================================ -->
+    <section class="tools section" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Proyek Pilihan</h2>
+                <p>Langsung dari GitHub <a href="https://github.com/Davyrann" target="_blank" rel="noopener" style="text-decoration:underline;font-weight:800;">@Davyrann</a></p>
+            </div>
+
+            <div class="tools-grid">
+
+                <a href="https://github.com/Davyrann/JudgeBot" target="_blank" rel="noopener"
+                    class="tool-card animate-on-scroll delay-1">
+                    <div class="tool-icon">⚖️</div>
+                    <h3>JudgeBot</h3>
+                    <p>Custom bot untuk Judge Server. TypeScript.</p>
+                    <span class="tool-link">
+                        Lihat di GitHub →
+                    </span>
+                </a>
+
+                <a href="https://github.com/Davyrann/MinecraftBot" target="_blank" rel="noopener"
+                    class="tool-card animate-on-scroll delay-2">
+                    <div class="tool-icon">⛏️</div>
+                    <h3>MinecraftBot</h3>
+                    <p>Minecraft automation bot. TypeScript.</p>
+                    <span class="tool-link">
+                        Lihat di GitHub →
+                    </span>
+                </a>
+
+                <a href="https://github.com/Davyrann/ES-ImGuiXPosed" target="_blank" rel="noopener"
+                    class="tool-card animate-on-scroll delay-3">
+                    <div class="tool-icon">🎮</div>
+                    <h3>ES-ImGuiXPosed</h3>
+                    <p>Game mod / overlay pakai ImGui. Bahasa C.</p>
+                    <span class="tool-link">
+                        Lihat di GitHub →
+                    </span>
+                </a>
+
+                <a href="https://github.com/Davyrann/SelfBot-Discord-V2" target="_blank" rel="noopener"
+                    class="tool-card animate-on-scroll delay-1">
+                    <div class="tool-icon">💬</div>
+                    <h3>SelfBot-Discord-V2</h3>
+                    <p>Discord selfbot versi rapi. Python.</p>
+                    <span class="tool-link">
+                        Lihat di GitHub →
+                    </span>
+                </a>
+
+                <a href="https://github.com/Davyrann/Sistem-Informasi-Alumni" target="_blank" rel="noopener"
+                    class="tool-card animate-on-scroll delay-2">
+                    <div class="tool-icon">🎓</div>
+                    <h3>Sistem Informasi Alumni</h3>
+                    <p>Aplikasi data alumni. Python.</p>
+                    <span class="tool-link">
+                        Lihat di GitHub →
+                    </span>
+                </a>
+
+                <a href="https://github.com/Davyrann/Pabelan-Residence" target="_blank" rel="noopener"
+                    class="tool-card animate-on-scroll delay-3">
+                    <div class="tool-icon">🏠</div>
+                    <h3>Pabelan Residence</h3>
+                    <p>Website real estate, tugas Desain Web. HTML/CSS.</p>
+                    <span class="tool-link">
+                        Lihat di GitHub →
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="services section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Mari Terhubung</h2>
+                <p>Terbuka untuk kolaborasi dan proyek seru</p>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-primary">
+                    ⭐ Follow di GitHub
+                </a>
+                <a href="https://github.com/Davyrann?tab=repositories" target="_blank" rel="noopener" class="btn btn-secondary">
+                    📦 Semua Repo
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
 
-                <!-- Brand Column -->
                 <div class="footer-brand">
                     <a href="#" class="nav-logo">
-                        <span class="logo-icon">🌿</span>
-                        <span>DelapanBit</span>
+                        <span class="logo-icon">👨‍💻</span>
+                        <span>Davyran</span>
                     </a>
                     <p>
-                        Playground digital untuk eksplorasi teknologi dan kreativitas.
-                        Dibuat dengan ❤️ dan sedikit bantuan AI.
+                        Fullstack Developer — bot, mod, dan web.
+                        Dibuat dengan ❤️ dan neobrutalism.
                     </p>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="footer-links">
                     <h4>Menu</h4>
                     <ul>
                         <li><a href="#home">Beranda</a></li>
-                        <li><a href="#services">Layanan</a></li>
                         <li><a href="#about">Tentang</a></li>
-                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#projects">Proyek</a></li>
+                        <li><a href="#contact">Kontak</a></li>
                     </ul>
                 </div>
 
-                <!-- Tools Links -->
                 <div class="footer-links">
-                    <h4>Tools</h4>
+                    <h4>Proyek</h4>
                     <ul>
-                        <li><a href="https://converter.delapanbit.my.id" target="_blank">Converter</a></li>
-                        <li><a href="#" style="color: var(--text-muted);">Random Generator (soon)</a></li>
-                        <li><a href="#" style="color: var(--text-muted);">Text Tools (soon)</a></li>
+                        <li><a href="https://github.com/Davyrann/JudgeBot" target="_blank" rel="noopener">JudgeBot</a></li>
+                        <li><a href="https://github.com/Davyrann/MinecraftBot" target="_blank" rel="noopener">MinecraftBot</a></li>
+                        <li><a href="https://github.com/Davyrann/ES-ImGuiXPosed" target="_blank" rel="noopener">ES-ImGuiXPosed</a></li>
                     </ul>
                 </div>
 
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    © 2026 DelapanBit. Semua hak dilindungi (atau tidak, karena ini cuma for fun 😄)
+                    © 2026 Davyran. Open source selamanya 🚀
                 </p>
 
-                <!-- AI Disclaimer - Sesuai request user -->
                 <div class="footer-disclaimer">
-                    <span class="ai-icon">🤖</span>
-                    <span>Website ini dibuat dengan bantuan AI dan hanya untuk bersenang-senang</span>
+                    <span class="ai-icon">💼</span>
+                    <span>Open to work — ayo kolaborasi</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 

@@ -103,14 +103,12 @@ function createParticle(container, index) {
     const particle = document.createElement('div');
     particle.className = 'particle';
 
-    // Random properties untuk variasi
-    const size = Math.random() * 10 + 5; // 5-15px
-    const left = Math.random() * 100; // 0-100%
-    const delay = Math.random() * 15; // 0-15s delay
-    const duration = Math.random() * 10 + 10; // 10-20s duration
-    const opacity = Math.random() * 0.3 + 0.1; // 0.1-0.4 opacity
+    const size = Math.random() * 10 + 5;
+    const left = Math.random() * 100;
+    const delay = Math.random() * 15;
+    const duration = Math.random() * 10 + 10;
+    const opacity = Math.random() * 0.3 + 0.1;
 
-    // Apply styles
     particle.style.cssText = `
     width: ${size}px;
     height: ${size}px;
@@ -121,9 +119,9 @@ function createParticle(container, index) {
     opacity: ${opacity};
   `;
 
-    // Variasi warna (hijau dengan berbagai shade)
-    const hue = 80 + Math.random() * 40; // Hijau range
-    particle.style.background = `hsl(${hue}, 60%, 50%)`;
+    const brutalColors = ['#FFDE59', '#FF90E8', '#7FDBFF', '#A8FF53', '#FF6B35'];
+    const borderColor = brutalColors[Math.floor(Math.random() * brutalColors.length)];
+    particle.style.borderColor = borderColor;
 
     container.appendChild(particle);
 }
