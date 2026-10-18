@@ -14,7 +14,8 @@
     <meta property="og:title" content="Davyran - Developer Portfolio">
     <meta property="og:description" content="Fullstack Developer portfolio — TypeScript, Python, C, Lua">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://davyran.github.io">
+    <meta property="og:url" content="https://delapanbit.my.id">
+    <meta property="og:image" content="https://picsum.photos/seed/davyran/1200/630">
 
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
@@ -22,13 +23,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <a class="skip-link" href="#main">Lewati ke konten</a>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -40,17 +43,19 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
                 <li><a href="#projects">Proyek</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span> <span></span>
                 <span></span>
             </button>
         </div>
     </nav>
+
+    <main id="main">
 
     <section class="hero section" id="home">
         <div class="particles" id="particles"></div>
@@ -163,7 +168,7 @@
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <h2>Proyek Pilihan</h2>
-                <p>Langsung dari GitHub <a href="https://github.com/Davyrann" target="_blank" rel="noopener" style="text-decoration:underline;font-weight:800;">@Davyrann</a></p>
+                <p>Langsung dari GitHub <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="section-link">@Davyrann</a></p>
             </div>
 
             <div class="tools-grid">
@@ -232,7 +237,7 @@
         </div>
     </section>
 
-    <section class="services section" id="contact">
+    <section class="contact section" id="contact">
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <h2>Mari Terhubung</h2>
@@ -249,6 +254,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -270,6 +277,7 @@
                     <ul>
                         <li><a href="#home">Beranda</a></li>
                         <li><a href="#about">Tentang</a></li>
+                        <li><a href="#skills">Keahlian</a></li>
                         <li><a href="#projects">Proyek</a></li>
                         <li><a href="#contact">Kontak</a></li>
                     </ul>

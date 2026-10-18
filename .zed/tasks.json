@@ -1,0 +1,16 @@
+[
+  {
+    "label": "preview: serve on :8000",
+    "command": "python",
+    "args": ["-m", "http.server", "8000"],
+    "env": {},
+    "reveal": "always"
+  },
+  {
+    "label": "preview: open index.html in browser",
+    "command": "cmd",
+    "args": ["/c", "start", "", "index.html"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "never"
+  }
+]

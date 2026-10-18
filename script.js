@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initScrollAnimations();
     initSmoothScroll();
+    initScrollSpy();
 
-    console.log('🌿 DelapanBit initialized successfully!');
+    console.log('🌿 Davyran portfolio initialized successfully!');
 });
 
 // ============================================================================
@@ -67,6 +68,9 @@ function initMobileMenu() {
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         navToggle.classList.toggle('active');
+        const open = navLinks.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
     });
 
     // Tutup menu saat link diklik
@@ -74,8 +78,45 @@ function initMobileMenu() {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Buka menu');
         });
     });
+}
+
+// ============================================================================
+// SCROLL SPY
+// Tandai nav link aktif sesuai section yang terlihat di viewport
+// ============================================================================
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const links = document.querySelectorAll('.nav-links a');
+
+    if (sections.length === 0 || links.length === 0) return;
+
+    const setActive = (id) => {
+        links.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) setActive(entry.target.id);
+        });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60)) {
+            const lastSection = sections[sections.length - 1];
+            if (lastSection) setActive(lastSection.id);
+        } else if (window.scrollY < 80) {
+            const firstSection = sections[0];
+            if (firstSection) setActive(firstSection.id);
+        }
+    }, { passive: true });
 }
 
 // ============================================================================
@@ -181,6 +222,12 @@ function initSmoothScroll() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+
+                // Pindahkan fokus keyboard ke tujuan (skip-link)
+                if (!targetElement.hasAttribute('tabindex')) {
+                    targetElement.setAttribute('tabindex', '-1');
+                }
+                targetElement.focus({ preventScroll: true });
             }
         });
     });
@@ -244,14 +291,14 @@ function isInViewport(element) {
 
 // ============================================================================
 // EASTER EGG 🥚
-// Ketik "delapanbit" di keyboard untuk surprise!
+// Ketik "davyran" di keyboard untuk surprise!
 // ============================================================================
 let konamiBuffer = '';
 document.addEventListener('keydown', (e) => {
     konamiBuffer += e.key.toLowerCase();
     konamiBuffer = konamiBuffer.slice(-10); // Keep last 10 chars
 
-    if (konamiBuffer.includes('delapanbit')) {
+    if (konamiBuffer.includes('davyran')) {
         console.log('🎉 You found the easter egg!');
         document.body.style.animation = 'none';
         document.body.offsetHeight; // Trigger reflow
