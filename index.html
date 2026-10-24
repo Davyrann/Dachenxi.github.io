@@ -18,12 +18,12 @@
     <meta property="og:image" content="https://picsum.photos/seed/davyran/1200/630">
 
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23121317%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%2216 18 22 12 16 6%22/><polyline points=%228 6 2 12 8 18%22/></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -35,9 +35,14 @@
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-icon">👨‍💻</span>
-                <span>Davyran</span>
+            <a href="#" class="nav-logo" aria-label="Davyran - Beranda">
+                <span class="logo-mark">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </span>
+                <span class="logo-text">Davyran</span>
             </a>
 
             <ul class="nav-links" id="navLinks">
@@ -48,63 +53,124 @@
                 <li><a href="#contact">Kontak</a></li>
             </ul>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
-                <span></span> <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-nav">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <main id="main">
 
+    <!-- HERO SECTION -->
     <section class="hero section" id="home">
-        <div class="particles" id="particles"></div>
-        <div class="hero-glow"></div>
-        <div class="hero-glow"></div>
+        <div class="hero-backdrop" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-radial-glow"></div>
+            <div class="particles" id="particles"></div>
+        </div>
 
-        <div class="hero-content">
-            <span class="hero-badge">👋 Halo, saya Davyran</span>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <span class="badge-dot"></span>
+                    <span class="badge-tag">Developer Platform</span>
+                    <span class="badge-separator">/</span>
+                    <span class="badge-text">Davyran Portfolio</span>
+                </div>
 
-            <h1 class="hero-title">
-                Bangun Bot,<br>
-                <span class="highlight">Mod & Web</span>
-            </h1>
+                <h1 class="hero-title animate-on-scroll delay-1">
+                    Bangun Bot,<br>
+                    <span class="hero-title-highlight">Mod Game & Web Modern.</span>
+                </h1>
 
-            <p class="hero-subtitle">
-                Fullstack Developer — TypeScript, Python, C, Lua.
-                Bikin Discord bot, game automation, dan web app.
-            </p>
+                <p class="hero-subtitle animate-on-scroll delay-2">
+                    Fullstack Developer spesialis TypeScript, Python, C, dan Lua. Fokus merancang automasi Discord, game scripting, serta arsitektur web berperforma tinggi.
+                </p>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    🚀 Lihat Proyek
-                </a>
-                <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-secondary">
-                    ⭐ GitHub Saya
-                </a>
+                <div class="hero-buttons animate-on-scroll delay-3">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Lihat Proyek Pilihan</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>Jelajahi GitHub</span>
+                    </a>
+                </div>
+
+                <div class="hero-tech-strip animate-on-scroll delay-4">
+                    <span class="tech-label">Core Stacks</span>
+                    <div class="tech-pills">
+                        <span class="tech-pill">TypeScript</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">C / C++</span>
+                        <span class="tech-pill">Lua</span>
+                        <span class="tech-pill">Node.js</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section class="about section" id="about">
         <div class="container">
             <div class="about-container">
 
                 <div class="about-visual animate-on-scroll">
-                    <div class="about-image-placeholder">
-                        🧑‍💻
+                    <div class="code-terminal-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">davyran.config.ts</span>
+                            <span class="terminal-pill">Active</span>
+                        </div>
+                        <div class="terminal-body">
+                            <pre><code><span class="c-keyword">const</span> developer = {
+  name: <span class="c-string">'Davyran'</span>,
+  role: <span class="c-string">'Fullstack & Automation Dev'</span>,
+  focus: [<span class="c-string">'Discord Bot'</span>, <span class="c-string">'Game Scripting'</span>, <span class="c-string">'Web'</span>],
+  mindset: <span class="c-string">'Clean Code & Open Source'</span>,
+  available: <span class="c-boolean">true</span>
+};
+
+<span class="c-comment">// Continuous build & experiment</span>
+<span class="c-keyword">export default</span> developer;</code></pre>
+                        </div>
+                        <div class="terminal-footer">
+                            <div class="terminal-status">
+                                <span class="status-indicator"></span>
+                                <span>Compiled in 12ms · Zero errors</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="about-content animate-on-scroll delay-2">
-                    <h2>Tentang Saya</h2>
+                    <div class="section-tag">Profil Pengembang</div>
+                    <h2 class="section-title">Dedikasi Pada Solusi Otomasi & Kode Bersih</h2>
                     <p>
-                        Saya Davyran, developer yang suka automation dan game scripting.
-                        Fokus di TypeScript dan Python — dari Discord bot sampai Minecraft automation.
+                        Saya Davyran, pengembang yang berfokus pada otomasi sistem, scripting game, dan aplikasi web modular. Menguasai arsitektur backend TypeScript serta ekosistem Python untuk menghadirkan bot andal dan script yang presisi.
                     </p>
                     <p>
-                        Semua proyek saya open di GitHub. Senang eksperimen hal baru:
-                        bot, mod, web, dan tools kecil yang berguna.
+                        Seluruh proyek dikembangkan secara terbuka di GitHub sebagai komitmen terhadap budaya kolaboratif dan eksperimen teknologi yang berkelanjutan.
                     </p>
 
                     <div class="about-stats">
@@ -114,7 +180,7 @@
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">5</div>
-                            <div class="stat-label">Bahasa</div>
+                            <div class="stat-label">Bahasa Utama</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100%</div>
@@ -127,153 +193,282 @@
         </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section class="services section" id="skills">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <h2>Keahlian</h2>
-                <p>Apa yang saya kerjakan sehari-hari</p>
+                <div class="section-tag">Kemampuan Utama</div>
+                <h2 class="section-title">Spesialisasi & Kapabilitas Teknis</h2>
+                <p class="section-desc">Fokus teknis teruji dalam pengembangan bot, modifikasi sistem game, dan arsitektur web modern.</p>
             </div>
 
             <div class="services-grid">
 
                 <div class="service-card animate-on-scroll delay-1">
-                    <div class="service-icon">🤖</div>
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                            <circle cx="12" cy="5" r="2"></circle>
+                            <path d="M12 7v4"></path>
+                            <line x1="8" y1="16" x2="8" y2="16"></line>
+                            <line x1="16" y1="16" x2="16" y2="16"></line>
+                        </svg>
+                    </div>
                     <h3>Bot Development</h3>
-                    <p>Discord & Telegram bot pakai TypeScript dan Python. JudgeBot, MinecraftBot, Selfbot.</p>
+                    <p>Perancangan custom bot Discord & Telegram menggunakan arsitektur event-driven di TypeScript dan Python. Menangani server judging, bot otomasi, dan integrasi API realtime.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">TypeScript</span>
+                        <span class="card-tag">Discord.js</span>
+                        <span class="card-tag">Python</span>
+                    </div>
                 </div>
 
                 <div class="service-card animate-on-scroll delay-2">
-                    <div class="service-icon">🎮</div>
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="6" y1="12" x2="10" y2="12"></line>
+                            <line x1="8" y1="10" x2="8" y2="14"></line>
+                            <line x1="15" y1="13" x2="15.01" y2="13"></line>
+                            <line x1="18" y1="11" x2="18.01" y2="11"></line>
+                            <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                        </svg>
+                    </div>
                     <h3>Game Scripting</h3>
-                    <p>Minecraft macro, Lua script, dan game mod. ES-ImGuiXPosed pakai C.</p>
+                    <p>Pemrograman otomasi Minecraft, manipulasi memori, injeksi modul XPosed, serta antarmuka grafis ImGui berbasis bahasa C dan script Lua tingkat lanjut.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">C / C++</span>
+                        <span class="card-tag">ImGui</span>
+                        <span class="card-tag">Lua</span>
+                    </div>
                 </div>
 
                 <div class="service-card animate-on-scroll delay-3">
-                    <div class="service-icon">🌐</div>
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
                     <h3>Web Development</h3>
-                    <p>Landing page, real estate web, sistem informasi alumni. HTML, CSS, Python.</p>
+                    <p>Membangun landing page terstruktur, sistem manajemen data alumni, serta aplikasi web yang responsif, terakses dengan standar WAI-ARIA, dan ringan diakses.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">HTML5 / CSS3</span>
+                        <span class="card-tag">JavaScript</span>
+                        <span class="card-tag">Fullstack</span>
+                    </div>
                 </div>
 
                 <div class="service-card animate-on-scroll delay-4">
-                    <div class="service-icon">⚙️</div>
+                    <div class="service-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                    </div>
                     <h3>Automation & OOP</h3>
-                    <p>Python scripting, automation tools, dan praktik OOP bersih.</p>
+                    <p>Automasi workflow repetitif, scraping web terarah, dan penerapan pola desain Berorientasi Objek (OOP) yang teruji, mudah dimaintain, dan modular.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Python Scripting</span>
+                        <span class="card-tag">CLI Tools</span>
+                        <span class="card-tag">OOP</span>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section class="tools section" id="projects">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <h2>Proyek Pilihan</h2>
-                <p>Langsung dari GitHub <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="section-link">@Davyrann</a></p>
+                <div class="section-tag">Katalog Kode</div>
+                <h2 class="section-title">Proyek Pilihan Unggulan</h2>
+                <p class="section-desc">Repositori open source terverifikasi yang langsung bersumber dari <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="section-link">@Davyrann</a>.</p>
             </div>
 
             <div class="tools-grid">
 
                 <a href="https://github.com/Davyrann/JudgeBot" target="_blank" rel="noopener"
                     class="tool-card animate-on-scroll delay-1">
-                    <div class="tool-icon">⚖️</div>
-                    <h3>JudgeBot</h3>
-                    <p>Custom bot untuk Judge Server. TypeScript.</p>
-                    <span class="tool-link">
-                        Lihat di GitHub →
-                    </span>
+                    <div class="tool-card-top">
+                        <span class="tool-badge">TypeScript</span>
+                        <span class="tool-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>JudgeBot</h3>
+                        <p>Custom bot untuk integrasi dengan Judge Server, verifikasi tugas, dan otomasi evaluasi kode interaktif.</p>
+                    </div>
+                    <div class="tool-card-footer">
+                        <span class="tool-link-text">Buka di GitHub</span>
+                    </div>
                 </a>
 
                 <a href="https://github.com/Davyrann/MinecraftBot" target="_blank" rel="noopener"
                     class="tool-card animate-on-scroll delay-2">
-                    <div class="tool-icon">⛏️</div>
-                    <h3>MinecraftBot</h3>
-                    <p>Minecraft automation bot. TypeScript.</p>
-                    <span class="tool-link">
-                        Lihat di GitHub →
-                    </span>
+                    <div class="tool-card-top">
+                        <span class="tool-badge">TypeScript</span>
+                        <span class="tool-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>MinecraftBot</h3>
+                        <p>Automasi klien Minecraft berbasis paket jaringan untuk tugas rutin, pemantauan server, dan scripting cerdas.</p>
+                    </div>
+                    <div class="tool-card-footer">
+                        <span class="tool-link-text">Buka di GitHub</span>
+                    </div>
                 </a>
 
                 <a href="https://github.com/Davyrann/ES-ImGuiXPosed" target="_blank" rel="noopener"
                     class="tool-card animate-on-scroll delay-3">
-                    <div class="tool-icon">🎮</div>
-                    <h3>ES-ImGuiXPosed</h3>
-                    <p>Game mod / overlay pakai ImGui. Bahasa C.</p>
-                    <span class="tool-link">
-                        Lihat di GitHub →
-                    </span>
+                    <div class="tool-card-top">
+                        <span class="tool-badge">Bahasa C</span>
+                        <span class="tool-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>ES-ImGuiXPosed</h3>
+                        <p>Modifikasi game tingkat native menggunakan overlay Dear ImGui yang disematkan melalui modul XPosed.</p>
+                    </div>
+                    <div class="tool-card-footer">
+                        <span class="tool-link-text">Buka di GitHub</span>
+                    </div>
                 </a>
 
                 <a href="https://github.com/Davyrann/SelfBot-Discord-V2" target="_blank" rel="noopener"
                     class="tool-card animate-on-scroll delay-1">
-                    <div class="tool-icon">💬</div>
-                    <h3>SelfBot-Discord-V2</h3>
-                    <p>Discord selfbot versi rapi. Python.</p>
-                    <span class="tool-link">
-                        Lihat di GitHub →
-                    </span>
+                    <div class="tool-card-top">
+                        <span class="tool-badge">Python</span>
+                        <span class="tool-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>SelfBot-Discord-V2</h3>
+                        <p>Discord bot asisten utilitas pribadi versi V2 dengan penanganan pesan modular dan perintah praktis.</p>
+                    </div>
+                    <div class="tool-card-footer">
+                        <span class="tool-link-text">Buka di GitHub</span>
+                    </div>
                 </a>
 
                 <a href="https://github.com/Davyrann/Sistem-Informasi-Alumni" target="_blank" rel="noopener"
                     class="tool-card animate-on-scroll delay-2">
-                    <div class="tool-icon">🎓</div>
-                    <h3>Sistem Informasi Alumni</h3>
-                    <p>Aplikasi data alumni. Python.</p>
-                    <span class="tool-link">
-                        Lihat di GitHub →
-                    </span>
+                    <div class="tool-card-top">
+                        <span class="tool-badge">Python / Database</span>
+                        <span class="tool-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Sistem Informasi Alumni</h3>
+                        <p>Aplikasi pengelolaan data dan relasi alumni dengan pencatatan terstruktur dan visualisasi basis data.</p>
+                    </div>
+                    <div class="tool-card-footer">
+                        <span class="tool-link-text">Buka di GitHub</span>
+                    </div>
                 </a>
 
                 <a href="https://github.com/Davyrann/Pabelan-Residence" target="_blank" rel="noopener"
                     class="tool-card animate-on-scroll delay-3">
-                    <div class="tool-icon">🏠</div>
-                    <h3>Pabelan Residence</h3>
-                    <p>Website real estate, tugas Desain Web. HTML/CSS.</p>
-                    <span class="tool-link">
-                        Lihat di GitHub →
-                    </span>
+                    <div class="tool-card-top">
+                        <span class="tool-badge">HTML / Modern CSS</span>
+                        <span class="tool-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Pabelan Residence</h3>
+                        <p>Situs web showcase properti residensial dengan tata letak adaptif dan tipografi yang dioptimalkan.</p>
+                    </div>
+                    <div class="tool-card-footer">
+                        <span class="tool-link-text">Buka di GitHub</span>
+                    </div>
                 </a>
 
             </div>
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="contact section" id="contact">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2>Mari Terhubung</h2>
-                <p>Terbuka untuk kolaborasi dan proyek seru</p>
-            </div>
+            <div class="contact-box animate-on-scroll">
+                <div class="section-tag">Kolaborasi & Diskusi</div>
+                <h2 class="section-title">Mulai Diskusi atau Proyek Bersama</h2>
+                <p class="section-desc">Terbuka untuk kolaborasi otomasi bot, kontribusi open source, atau peluang rekayasa perangkat lunak.</p>
 
-            <div class="hero-buttons">
-                <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-primary">
-                    ⭐ Follow di GitHub
-                </a>
-                <a href="https://github.com/Davyrann?tab=repositories" target="_blank" rel="noopener" class="btn btn-secondary">
-                    📦 Semua Repo
-                </a>
+                <div class="hero-buttons">
+                    <a href="https://github.com/Davyrann" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>Follow di GitHub</span>
+                    </a>
+                    <a href="https://github.com/Davyrann?tab=repositories" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                        </svg>
+                        <span>Daftar Repositori Lengkap</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
 
                 <div class="footer-brand">
                     <a href="#" class="nav-logo">
-                        <span class="logo-icon">👨‍💻</span>
+                        <span class="logo-mark">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </span>
                         <span>Davyran</span>
                     </a>
                     <p>
-                        Fullstack Developer — bot, mod, dan web.
-                        Dibuat dengan ❤️ dan neobrutalism.
+                        Fullstack Developer yang berfokus pada ekosistem otomasi, bot modern, dan arsitektur web berperforma tinggi.
                     </p>
+                    <div class="footer-status-pill">
+                        <span class="status-indicator"></span>
+                        <span>Tersedia untuk proyek & kolaborasi</span>
+                    </div>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Menu</h4>
+                    <h4>Navigasi</h4>
                     <ul>
                         <li><a href="#home">Beranda</a></li>
                         <li><a href="#about">Tentang</a></li>
@@ -284,11 +479,12 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Proyek</h4>
+                    <h4>Proyek Populer</h4>
                     <ul>
                         <li><a href="https://github.com/Davyrann/JudgeBot" target="_blank" rel="noopener">JudgeBot</a></li>
                         <li><a href="https://github.com/Davyrann/MinecraftBot" target="_blank" rel="noopener">MinecraftBot</a></li>
                         <li><a href="https://github.com/Davyrann/ES-ImGuiXPosed" target="_blank" rel="noopener">ES-ImGuiXPosed</a></li>
+                        <li><a href="https://github.com/Davyrann/SelfBot-Discord-V2" target="_blank" rel="noopener">SelfBot-Discord-V2</a></li>
                     </ul>
                 </div>
 
@@ -296,12 +492,11 @@
 
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    © 2026 Davyran. Open source selamanya 🚀
+                    © 2026 Davyran. Open Source selamanya.
                 </p>
 
-                <div class="footer-disclaimer">
-                    <span class="ai-icon">💼</span>
-                    <span>Open to work — ayo kolaborasi</span>
+                <div class="footer-credentials">
+                    <span>Dirancang dengan standar Google Antigravity aesthetic</span>
                 </div>
             </div>
         </div>
